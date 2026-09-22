@@ -2,22 +2,19 @@
 
 A modular Retrieval-Augmented Generation (RAG) practice project built to understand the complete RAG pipeline — from loading documents and generating embeddings to storing vectors in FAISS and generating answers using an LLM.
 
-The project currently runs through the command line/console and does not include a Streamlit, Flask, or other web-based interface.
-
+The project currently runs through the command line/console.
 ## RAG Pipeline
 
 The project follows this workflow:
-```mermaid
-graph TD;
-    Documents-->Document Loader;
-    Document Loader-->Text Chunks;
-    Text Chunks-->Embeddings;
-    Embeddings-->FAISS Vector Store;
-    FAISS Vector Store-->Similarity Search;
-    Similarity Search-->Relevant Context;
-    Relevant Context-->LLM;
-    LLM-->Generated Answer;
-```
+- Documents
+- Document Loader
+- Text Chunks
+- Embeddings
+- FAISS Vector Store
+- Similarity Search
+- Relevant Context
+- LLM
+- Generated Answer
 
 ## Features
 - Load documents from multiple file formats
