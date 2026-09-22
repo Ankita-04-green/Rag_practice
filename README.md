@@ -7,32 +7,18 @@ The project currently runs through the command line/console and does not include
 ## RAG Pipeline
 
 The project follows this workflow:
+```mermaid
+graph TD;
+    Documents-->Document Loader;
+    Document Loader-->Text Chunks;
+    Text Chunks-->Embeddings;
+    Embeddings-->FAISS Vector Store;
+    FAISS Vector Store-->Similarity Search;
+    Similarity Search-->Relevant Context;
+    Relevant Context-->LLM;
+    LLM-->Generated Answer;
+```
 
-Documents
-   │
-   ▼
-Document Loader
-   │
-   ▼
-Text Chunks
-   │
-   ▼
-Embeddings
-   │
-   ▼
-FAISS Vector Store
-   │
-   ▼
-Similarity Search
-   │
-   ▼
-Relevant Context
-   │
-   ▼
-LLM
-   │
-   ▼
-Generated Answer
 ## Features
 - Load documents from multiple file formats
 - Support for:
